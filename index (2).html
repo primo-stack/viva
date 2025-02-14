@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viva La Vida</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #ff9a9e, #bd9185, #ffdde1, #ffcc70);
+        }
+        #yes {
+            font-size: 20px;
+            padding: 10px 20px;
+            background-color: rgb(218, 122, 218);
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 100px;
+            margin-right: 20px;
+        }
+        #no {
+            font-size: 20px;
+            padding: 10px 20px;
+            background-color:rgb(218, 122, 218);
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 100px;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            text-align: center;
+            position: relative;
+        
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <p>Hello po Tita, Belated Happy Valentine's Day po!
+        I would like to ask permission po sana if pwede pong ayain si Allaine to go to Robinson's later, we're gonna eat lang po sana then play arcade after. I'll make sure po to take her home before her curfew. I hope you'll agree po, Thank You po!</p>
+   <img src="ll.gif"><br>
+        <a href="about.html"><button id="yes">Yes</button></a>
+
+  <a href="home.html"><button id="no">No</button></a>
+</div>
+    <script>
+        function sendClick(choice) {
+        fetch("https://script.google.com/macros/s/AKfycbzT97Z2Q5qr9VcIWfli-jsiuu54P0WnxPeRUJ9hbG8R5s0zNbvcG1W1Q9ABdZJ6k701/exec=" + choice);
+    }
+
+    document.getElementById("yes").addEventListener("click", function() {
+        sendClick("Yes");
+    });
+
+    document.getElementById("no").addEventListener("click", function() {
+        sendClick("No");
+    });
+    </script>
+
+</body>
+</html>
